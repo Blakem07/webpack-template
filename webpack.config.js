@@ -1,4 +1,3 @@
-// webpack.config.js
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
@@ -8,7 +7,7 @@ module.exports = {
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
-    clean: true,
+    clean: true, // Clean the output directory before each build
   },
   devtool: "eval-source-map",
   devServer: {
@@ -24,6 +23,13 @@ module.exports = {
   ],
   module: {
     rules: [
+      {
+        test: /\.m?js$/,           // Match .js and .mjs files
+        exclude: /node_modules/,   // Skip dependencies
+        use: {
+          loader: "babel-loader",  // Uses your babel.config.js
+        },
+      },
       {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
@@ -43,3 +49,4 @@ module.exports = {
     ],
   },
 };
+

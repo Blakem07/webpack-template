@@ -10,6 +10,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.28.5",
+    "@babel/preset-env": "^7.28.5",
+    "babel-loader": "^10.0.0",
     "css-loader": "^7.1.2",
     "html-webpack-plugin": "^5.6.0",
     "style-loader": "^4.0.0",
@@ -29,6 +32,7 @@
     "clone-deep": "^4.0.1",
     "colorette": "^2.0.20",
     "commander": "^2.20.3",
+    "core-js": "^3.46.0",
     "cross-spawn": "^7.0.3",
     "electron-to-chromium": "^1.5.25",
     "enhanced-resolve": "^5.17.1",
