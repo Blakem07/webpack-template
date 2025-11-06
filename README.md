@@ -13,6 +13,7 @@ This template handles:
 - Images
 - Fonts
 - Webpack Dev Server
+- Jest testing
 
 ## Installation Instructions
 
@@ -20,7 +21,6 @@ This template handles:
 
    ```bash
    git clone https://github.com/Blakem07/webpack-template.git
-   ```
 ````
 
 2. Install dependencies:
@@ -30,6 +30,8 @@ This template handles:
    ```
 
 ## Usage
+
+### Build and Serve
 
 To rebundle:
 
@@ -41,6 +43,32 @@ To run on a live server:
 
 ```bash
 npx webpack serve
+```
+
+### Run Dev Workflow (Webpack + Tests)
+
+You can run the dev server and Jest tests side by side using:
+
+```bash
+npm run dev
+```
+
+This uses `concurrently` to run both the webpack-dev-server and Jest in watch mode.
+
+## Testing with Jest
+
+A simple placeholder test is included in `src/tests/example.test.js`:
+
+```js
+test('this test always passes', () => {
+  expect(true).toBe(true);
+});
+```
+
+To run tests separately:
+
+```bash
+npm test
 ```
 
 ## Using Images and Videos
@@ -78,17 +106,17 @@ document.body.appendChild(video);
 
 **Images:**
 
-- `.png`
-- `.jpg`, `.jpeg`
-- `.gif`
-- `.svg`
-- `.webp`
+* `.png`
+* `.jpg`, `.jpeg`
+* `.gif`
+* `.svg`
+* `.webp`
 
 **Videos:**
 
-- `.mp4`
-- `.webm`
-- `.ogg`
+* `.mp4`
+* `.webm`
+* `.ogg`
 
 ### Alternative: Static Assets via `public/`
 

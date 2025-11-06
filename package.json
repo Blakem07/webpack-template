@@ -1,10 +1,12 @@
 {
   "name": "webpack-template",
   "version": "1.0.0",
-  "description": "��#\u0000 \u0000w\u0000e\u0000b\u0000p\u0000a\u0000c\u0000k\u0000-\u0000t\u0000e\u0000m\u0000p\u0000l\u0000a\u0000t\u0000e\u0000\r\u0000 \u0000",
+  "description": "Webpack template for development",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --watchAll",
+    "serve": "webpack serve",
+    "dev": "concurrently --names \"WEBPACK,JEST\" --prefix-colors \"blue,green\" \"npm run serve\" \"npm run test\""
   },
   "keywords": [],
   "author": "",
@@ -12,9 +14,12 @@
   "devDependencies": {
     "@babel/core": "^7.28.5",
     "@babel/preset-env": "^7.28.5",
+    "babel-jest": "^30.2.0",
     "babel-loader": "^10.0.0",
+    "concurrently": "^9.2.1",
     "css-loader": "^7.1.2",
     "html-webpack-plugin": "^5.6.0",
+    "jest": "^30.2.0",
     "style-loader": "^4.0.0",
     "webpack": "^5.95.0",
     "webpack-cli": "^5.1.4",
